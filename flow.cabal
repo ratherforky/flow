@@ -51,6 +51,8 @@ library
   import: library
 
   exposed-modules: Flow
+                 , FlowINLINE
+                 , FlowNOINLINE
   hs-source-dirs: source/library
 
 test-suite flow-test-suite
@@ -58,6 +60,7 @@ test-suite flow-test-suite
 
   build-depends:
     , HUnit >= 1.6.1 && < 1.7
+    , criterion
   hs-source-dirs: source/test-suite
   main-is: Main.hs
   type: exitcode-stdio-1.0

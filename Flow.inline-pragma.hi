@@ -1,0 +1,145 @@
+Magic: Wanted 33214052,
+       got    33214052
+Version: Wanted 9082,
+         got    9082
+Way: Wanted ,
+     got    
+interface FlowINLINE 9082
+  interface hash: ede15bd0f9ccf1ad52a8fc06340d3211
+  ABI hash: a1cfe1dd9edb568717625b3a747b5500
+  export-list hash: 74ca115ca2e1efa63b1f9b40ddec188f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f2b126fe71d9f7b07a4a53e54740217a
+  opt_hash: 53a7eb3092e6f1f14b0dda62e9926dc5
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  src_hash: 236ff7a7de36f31e0aef144aa67e3dfb
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  !>
+  .>
+  <!
+  <.
+  <|
+  apply
+  apply'
+  compose
+  |>
+direct module dependencies:
+boot module dependencies:
+direct package dependencies: base-4.19.1.0
+plugin package dependencies:
+trusted package dependencies: base-4.19.1.0
+orphans: GHC.Base GHC.Float GHC.Prim.Ext
+family instance modules: Control.Applicative Control.Arrow
+                         Data.Functor.Const Data.Functor.Identity Data.Monoid
+                         Data.Semigroup.Internal Data.Type.Ord GHC.Generics GHC.IO.Exception
+                         GHC.RTS.Flags
+import  -/  Prelude cdb3bcad7e4db43703bf928ea9dd689b
+fixities infixl 0 !>, infixl 9 .>, infixr 0 <!, infixr 9 <.,
+         infixr 0 <|, infixl 0 |>
+2b7daf06b258884c7c028b51cba98110
+  (!>) :: a -> (a -> b) -> b
+  [HasNoCafRefs, LambdaFormInfo: LFReEntrant 2, Arity: 2,
+   Strictness: <1L><1C(1,L)>, Unfolding: Core: <vanilla> apply']
+55532f629fcc4654d61730176e3eed8f
+  $trModule :: GHC.Types.Module
+  [HasNoCafRefs, TagSig: <TagProper>,
+   LambdaFormInfo: LFCon[GHC.Types.Module],
+   Unfolding: Core: <vanilla> GHC.Types.Module $trModule3 $trModule1]
+f493a6e127397eee8d44a00636f10f14
+  $trModule1 :: GHC.Types.TrName
+  [HasNoCafRefs, TagSig: <TagProper>,
+   LambdaFormInfo: LFCon[GHC.Types.TrNameS],
+   Unfolding: Core: <vanilla> GHC.Types.TrNameS $trModule2]
+d58343f5438a437e73ab4b55434fe0d6
+  $trModule2 :: GHC.Prim.Addr#
+  [HasNoCafRefs, LambdaFormInfo: LFUnlifted,
+   Unfolding: Core: <vanilla> "FlowINLINE"#]
+6240ea88ba7750b33abd2b8300b9878c
+  $trModule3 :: GHC.Types.TrName
+  [HasNoCafRefs, TagSig: <TagProper>,
+   LambdaFormInfo: LFCon[GHC.Types.TrNameS],
+   Unfolding: Core: <vanilla> GHC.Types.TrNameS $trModule4]
+13b72b988bd9e4e02222aa47612fb188
+  $trModule4 :: GHC.Prim.Addr#
+  [HasNoCafRefs, LambdaFormInfo: LFUnlifted,
+   Unfolding: Core: <vanilla> "flow-2.0.0.4-inplace"#]
+94451dae244865747b3f6a6412dc6486
+  (.>) :: (a -> b) -> (b -> c) -> a -> c
+  [HasNoCafRefs, LambdaFormInfo: LFReEntrant 3, Arity: 3,
+   Strictness: <MC(1,L)><1C(1,L)><L>, Inline: (sat-args=2),
+   Unfolding: Core: StableUser <2,FalseFalse>
+              \ @a
+                @b
+                @c
+                (f['GHC.Types.Many] :: a -> b)
+                (g['GHC.Types.Many] :: b -> c)
+                (x['GHC.Types.Many] :: a) ->
+              g (f x)]
+7052c77941ba3a5cd567c2764078a198
+  (<!) :: (a -> b) -> a -> b
+  [HasNoCafRefs, LambdaFormInfo: LFReEntrant 2, Arity: 2,
+   Strictness: <1C(1,L)><1L>,
+   Unfolding: Core: <vanilla>
+              \ @a @b (f['GHC.Types.Many] :: a -> b) (x['GHC.Types.Many] :: a) ->
+              case x of x1 { DEFAULT -> f x1 }]
+b9b923556c52c1291404285a9899bb2e
+  (<.) :: (b -> c) -> (a -> b) -> a -> c
+  [HasNoCafRefs, LambdaFormInfo: LFReEntrant 3, Arity: 3,
+   Strictness: <1C(1,L)><MC(1,L)><L>,
+   Unfolding: Core: <vanilla>
+              \ @b
+                @c
+                @a
+                (g['GHC.Types.Many] :: b -> c)
+                (f['GHC.Types.Many] :: a -> b) ->
+              compose @a @b @c f g]
+38feefe781d8fb615717591c71c74803
+  (<|) :: (a -> b) -> a -> b
+  [HasNoCafRefs, LambdaFormInfo: LFReEntrant 2, Arity: 2,
+   Strictness: <1C(1,L)><L>,
+   Unfolding: Core: <vanilla>
+              \ @a @b (f['GHC.Types.Many] :: a -> b) (x['GHC.Types.Many] :: a) ->
+              f x]
+8e80465b023325dd2fee046086c329e2
+  apply :: a -> (a -> b) -> b
+  [HasNoCafRefs, LambdaFormInfo: LFReEntrant 2, Arity: 2,
+   Strictness: <L><1C(1,L)>,
+   Unfolding: Core: <vanilla>
+              \ @a @b (x['GHC.Types.Many] :: a) (f['GHC.Types.Many] :: a -> b) ->
+              f x]
+9f0a04ea529881740d76b4ff64d48a5d
+  apply' :: a -> (a -> b) -> b
+  [HasNoCafRefs, LambdaFormInfo: LFReEntrant 2, Arity: 2,
+   Strictness: <1L><1C(1,L)>,
+   Unfolding: Core: <vanilla>
+              \ @a @b (x['GHC.Types.Many] :: a) (f['GHC.Types.Many] :: a -> b) ->
+              case x of x1 { DEFAULT -> f x1 }]
+c6f433a495e672c21570c1be7463ec37
+  compose :: (a -> b) -> (b -> c) -> a -> c
+  [HasNoCafRefs, LambdaFormInfo: LFReEntrant 3, Arity: 3,
+   Strictness: <MC(1,L)><1C(1,L)><L>, Inline: (sat-args=2),
+   Unfolding: Core: StableUser <2,FalseFalse>
+              \ @a
+                @b
+                @c
+                (f['GHC.Types.Many] :: a -> b)
+                (g['GHC.Types.Many] :: b -> c)
+                (x['GHC.Types.Many] :: a) ->
+              g (f x)]
+7004cc9b2f03e65320fcbff2ea7975bd
+  (|>) :: a -> (a -> b) -> b
+  [HasNoCafRefs, LambdaFormInfo: LFReEntrant 2, Arity: 2,
+   Strictness: <L><1C(1,L)>, Unfolding: Core: <vanilla> apply]
+Warnings:
+  Deprecated names:
+  Deprecated exports:
+trusted: safe-inferred
+require own pkg trusted: False
+docs:
+  Nothing
+extensible fields:
+
